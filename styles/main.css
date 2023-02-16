@@ -116,6 +116,7 @@
   font-size: 32px;
   line-height: 38px;
   color: #000;
+  margin-left: 17px;
 }
 .our-projects__section {
   display: flex;
@@ -128,12 +129,18 @@
   border: 3px solid #000;
   padding-left: 17px;
 }
+.our-projects__section:nth-child(3) > h1 {
+  font-size: 20px;
+  line-height: 24px;
+}
 .our-projects__section--last {
   height: 90px;
   box-sizing: border-box;
   background: #fff;
   border: 3px solid #000;
   justify-content: center;
+}
+.our-projects__section--last > h1 {
   font-size: 24px;
   line-height: 29px;
 }
@@ -160,10 +167,12 @@
   border-bottom: 2px dashed #000;
 }
 .our-projects__container {
-  height: 552px;
+  height: 642px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: 14px;
+  margin-right: 18px;
 }
 
 .arrow {

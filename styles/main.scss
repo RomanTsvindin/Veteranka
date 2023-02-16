@@ -117,6 +117,7 @@
     font-size: 32px;
     line-height: 38px;
     color: #000;
+    margin-left: 17px;
   }
   &__section {
     display: flex;
@@ -128,14 +129,21 @@
     background: #fff;
     border: 3px solid #000;
     padding-left: 17px;
+    &:nth-child(3) > h1 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
     &--last{
       height: 90px;
       box-sizing: border-box;
       background: #fff;
       border: 3px solid #000;
       justify-content: center;
-      font-size: 24px;
-      line-height: 29px;
+      & > h1 {
+        font-size: 24px;
+        line-height: 29px;
+      }
     }
   }
   &__section-title {
@@ -159,10 +167,13 @@
     border-bottom: 2px dashed #000;
   }
   &__container {
-    height: 552px;
+    height: 642px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: 14px;
+    margin-right: 18px;
+    
   }
 }
 
