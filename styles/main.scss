@@ -10,11 +10,17 @@
   }
 }
 
-section {
+.section {
   margin: 32px 16px;
-}
-.section_title {
-  font-size: 32px;
+
+  &__title {
+    font-family: NAMU_400, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    color: #000;
+  }
 }
 
 .header {
@@ -73,20 +79,22 @@ section {
 }
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 21px 14px;
-  width: 280px;
-  height: 52px;
-  background-color: #fff;
-  margin: 0 auto 32px 16px;
-  font-family: Roboto Mono;
-  font-size: 18px;
-  line-height: 24px;
-  text-decoration: none;
-  color: #000;
+  &--header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 21px 14px;
+    width: 280px;
+    height: 52px;
+    background-color: #fff;
+    margin: 0 auto 32px 16px;
+    font-family: Roboto Mono;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #000;
+  }
 }
 
 .achievments {
@@ -120,14 +128,6 @@ section {
 .our-projects {
   height: 739px;
   background-color: #fff;
-  &__title {
-    font-family: NAMU_400, serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 38px;
-    color: #000;
-  }
   &__section {
     display: flex;
     flex-direction: column;
@@ -138,14 +138,21 @@ section {
     background: #fff;
     border: 3px solid #000;
     padding-left: 17px;
+    &:nth-child(3) > h1 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
     &--last{
       height: 90px;
       box-sizing: border-box;
       background: #fff;
       border: 3px solid #000;
       justify-content: center;
-      font-size: 24px;
-      line-height: 29px;
+      & > h1 {
+        font-size: 24px;
+        line-height: 29px;
+      }
     }
   }
   &__section-title {
@@ -169,10 +176,11 @@ section {
     border-bottom: 2px dashed #000;
   }
   &__container {
-    height: 552px;
+    height: 642px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
   }
 }
 
@@ -186,23 +194,6 @@ section {
   top: 50%;
   margin-top: -22px;
 }
-
-.button2 {
-  display: flex;
-  height: 53px;
-  background: #000000;
-  border: 2px solid #000000;
-  text-decoration: none;
-  color: #fff;
-  font-family: NAMU_900;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 19px;
-  align-items: center;
-  justify-content: center;
-}
-
 .shop_description {
   margin: 16px 0;
   line-height: 28px;
@@ -260,20 +251,20 @@ section {
     justify-content: space-between;
     margin: 32px 0;
 
-    button {
+    .button {
       width: 100%;
 
-      &.white_on_black {
+      &--white_on_black {
         margin-right: 8px;
       }
 
-      &.black_on_black {
+      &--black_on_black {
         margin-left: 8px;
       }
     }
   }
 } 
-button {
+.button {
   border: none;
   border-radius: 0;
   padding: 12px 14px;
@@ -283,26 +274,28 @@ button {
   font-style: normal;
   font-weight: 900;
   font-size: 16px;
+  text-decoration: none;
+  text-align: center;
 
-  &.white_on_black {
+  &--white_on_black {
     background: #fff;
     color: #000;
     border-color: #fff;
   }
 
-  &.white_on_white {
+  &--white_on_white {
     background: #fff;
     color: #000;
     border-color:#000;
   }
 
-  &.black_on_black {
+  &--black_on_black {
     background: #000;
     color: #fff;
     border-color:#fff;
   }
 
-  &.black_on_white {
+  &--black_on_white {
     background: #000;
     color: #fff;
     border-color:#000;

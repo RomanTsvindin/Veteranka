@@ -6,11 +6,15 @@
     .page__body::-webkit-scrollbar {
       display: none; }
 
-section {
+.section {
   margin: 32px 16px; }
-
-.section_title {
-  font-size: 32px; }
+  .section__title {
+    font-family: NAMU_400, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    color: #000; }
 
 .header {
   width: 100%;
@@ -59,7 +63,7 @@ section {
     width: 18px;
     height: 18px; }
 
-.button {
+.button--header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,13 +105,6 @@ section {
 .our-projects {
   height: 739px;
   background-color: #fff; }
-  .our-projects__title {
-    font-family: NAMU_400, serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 38px;
-    color: #000; }
   .our-projects__section {
     display: flex;
     flex-direction: column;
@@ -118,14 +115,18 @@ section {
     background: #fff;
     border: 3px solid #000;
     padding-left: 17px; }
+    .our-projects__section:nth-child(3) > h1 {
+      font-size: 20px;
+      line-height: 24px; }
     .our-projects__section--last {
       height: 90px;
       box-sizing: border-box;
       background: #fff;
       border: 3px solid #000;
-      justify-content: center;
-      font-size: 24px;
-      line-height: 29px; }
+      justify-content: center; }
+      .our-projects__section--last > h1 {
+        font-size: 24px;
+        line-height: 29px; }
   .our-projects__section-title {
     font-family: NAMU_400;
     font-style: normal;
@@ -145,7 +146,7 @@ section {
     text-decoration: none;
     border-bottom: 2px dashed #000; }
   .our-projects__container {
-    height: 552px;
+    height: 642px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
@@ -159,21 +160,6 @@ section {
   right: 14px;
   top: 50%;
   margin-top: -22px; }
-
-.button2 {
-  display: flex;
-  height: 53px;
-  background: #000000;
-  border: 2px solid #000000;
-  text-decoration: none;
-  color: #fff;
-  font-family: NAMU_900;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 19px;
-  align-items: center;
-  justify-content: center; }
 
 .shop_description {
   margin: 16px 0;
@@ -216,14 +202,14 @@ section {
     display: flex;
     justify-content: space-between;
     margin: 32px 0; }
-    .footer__buttons button {
+    .footer__buttons .button {
       width: 100%; }
-      .footer__buttons button.white_on_black {
+      .footer__buttons .button--white_on_black {
         margin-right: 8px; }
-      .footer__buttons button.black_on_black {
+      .footer__buttons .button--black_on_black {
         margin-left: 8px; }
 
-button {
+.button {
   border: none;
   border-radius: 0;
   padding: 12px 14px;
@@ -232,20 +218,22 @@ button {
   font-family: NAMU_900;
   font-style: normal;
   font-weight: 900;
-  font-size: 16px; }
-  button.white_on_black {
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center; }
+  .button--white_on_black {
     background: #fff;
     color: #000;
     border-color: #fff; }
-  button.white_on_white {
+  .button--white_on_white {
     background: #fff;
     color: #000;
     border-color: #000; }
-  button.black_on_black {
+  .button--black_on_black {
     background: #000;
     color: #fff;
     border-color: #fff; }
-  button.black_on_white {
+  .button--black_on_white {
     background: #000;
     color: #fff;
     border-color: #000; }
