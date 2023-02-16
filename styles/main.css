@@ -170,6 +170,25 @@
   justify-content: center;
   margin: 32px 0 0; }
 
+.team__bottom_button {
+  display: block;
+  width: 100%; }
+
+.team__items {
+  margin: 32px 0; }
+  .team__items__item__title {
+    font-size: 24px;
+    margin: 24px 0 16px; }
+  .team__items__item__date {
+    display: none; }
+  .team__items__item__social {
+    display: none;
+    justify-content: left;
+    height: 0;
+    overflow: hidden; }
+    .team__items__item__social a:first-child {
+      margin-left: 0; }
+
 .news__bottom_button {
   display: block;
   width: 100%; }
@@ -182,24 +201,24 @@
   .news__items__item__date {
     display: none; }
 
-.shop, .news__items {
+.shop, .news__items, .team__items {
   display: flex;
   justify-content: space-between;
   overflow-x: scroll;
   overflow-y: none; }
-  .shop__item, .news__items__item {
+  .shop__item, .news__items__item, .team__items__item {
     width: 254px;
     margin-left: 16px; }
-    .shop__item__img, .news__items__item__img {
+    .shop__item__img, .news__items__item__img, .team__items__item__img {
       width: 100%;
       overflow: hidden; }
-      .shop__item__img img, .news__items__item__img img {
+      .shop__item__img img, .news__items__item__img img, .team__items__item__img img {
         width: 254px; }
-    .shop__item__name, .shop__item__price, .news__items__item__name, .news__items__item__price {
+    .shop__item__name, .shop__item__price, .news__items__item__name, .news__items__item__price, .team__items__item__name, .team__items__item__price {
       margin: 10px 0; }
-  .shop__item:first-child, .news__items__item:first-child {
+  .shop__item:first-child, .news__items__item:first-child, .team__items__item:first-child {
     margin-left: 0; }
-  .shop__item button, .news__items__item button {
+  .shop__item button, .news__items__item button, .team__items__item button {
     width: 100%; }
 
 .footer {
@@ -219,6 +238,8 @@
         margin-right: 8px; }
       .footer__buttons .button--black_on_black {
         margin-left: 8px; }
+  .footer .social {
+    justify-content: center; }
 
 .button {
   border: none;
@@ -257,7 +278,6 @@
 
 .social {
   display: flex;
-  justify-content: center;
   margin: 32px 0; }
   .social a {
     display: block;
@@ -274,6 +294,12 @@
       background-image: url(../images/social/fb.svg); }
     .social a.tg {
       background-image: url(../images/social/telegram.svg); }
+  .social--black a.insta {
+    background-image: url(../images/social/insta_black.svg); }
+  .social--black a.twitter {
+    background-image: url(../images/social/twitter_black.svg); }
+  .social--black a.fb {
+    background-image: url(../images/social/fb_black.svg); }
 
 .go_up {
   display: flex;
