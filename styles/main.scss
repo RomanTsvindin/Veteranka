@@ -1,10 +1,20 @@
 .page {
+  font-family: 'NAMU_400';
+  font-size: 16px;
+
   &__body {
     margin: 0;
   &::-webkit-scrollbar {
     display: none;
     }
   }
+}
+
+section {
+  margin: 32px 16px;
+}
+.section_title {
+  font-size: 32px;
 }
 
 .header {
@@ -171,7 +181,7 @@
   position: absolute;
   height: 44px;
   width: 44px;
-  background-image: url(../images/arrow-back-sharp\ 1.svg);
+  background-image: url(../images/arrow-back-sharp1.svg);
   right: 14px; 
   top: 50%;
   margin-top: -22px;
@@ -191,4 +201,155 @@
   line-height: 19px;
   align-items: center;
   justify-content: center;
+}
+
+.shop_description {
+  margin: 16px 0;
+  line-height: 28px;
+}
+.shop_bottom_button {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 0;
+}
+.shop {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  overflow-y: none;
+ 
+  &__item {
+    width: 254px;
+    margin-left: 16px;
+
+    &__img {
+      width: 100%;
+      height: 254px;
+      overflow: hidden;
+
+      img {
+        width: 254px;
+      }
+    }
+
+    &__name, &__price {
+      margin: 10px 0;
+    }
+  }
+
+  &__item:first-child {
+    margin-left: 0;
+  }
+
+  &__item button {
+    width: 100%;
+  }
+}
+.footer {
+  background: #000000;
+  padding: 32px 16px;
+
+  &__logo {
+    display: block;
+    img {
+      width: 100%;
+    }
+  }
+  &__buttons { 
+    display: flex;
+    justify-content: space-between;
+    margin: 32px 0;
+
+    button {
+      width: 100%;
+
+      &.white_on_black {
+        margin-right: 8px;
+      }
+
+      &.black_on_black {
+        margin-left: 8px;
+      }
+    }
+  }
+} 
+button {
+  border: none;
+  border-radius: 0;
+  padding: 12px 14px;
+  line-height: 24px;
+  border: solid black 2px;
+  font-family: NAMU_900;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+
+  &.white_on_black {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+  }
+
+  &.white_on_white {
+    background: #fff;
+    color: #000;
+    border-color:#000;
+  }
+
+  &.black_on_black {
+    background: #000;
+    color: #fff;
+    border-color:#fff;
+  }
+
+  &.black_on_white {
+    background: #000;
+    color: #fff;
+    border-color:#000;
+  }
+}
+.contact_us_header {
+  font-weight: 100;
+  font-size: 32px;
+  color: #fff;
+  text-align: center;
+}
+.social {
+  display: flex;
+  justify-content: center; 
+  margin: 32px 0;
+
+  a {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-size: contain;
+    margin: 0 12px;
+
+    &.insta {
+      background-image: url(../images/social/insta.svg);
+    }
+    &.twitter {
+      background-image: url(../images/social/twitter.svg);
+    }
+    &.fb {
+      background-image: url(../images/social/fb.svg);
+    }
+    &.tg {
+      background-image: url(../images/social/telegram.svg);
+    }
+  }
+}
+.go_up {
+  display: flex;
+  justify-content: center;  
+
+  div {
+    width: 64px;
+    height: 64px;
+    background-position: center;
+    background-size: contain;
+    background-image: url(../images/up.svg);
+  }   
 }
