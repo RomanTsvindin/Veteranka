@@ -1,6 +1,9 @@
 @mixin for-desktop {
   @media (min-width: 600px) { @content; }
 }
+@mixin for-mobile {
+  @media (max-width: 601px) { @content; }
+}
 
 
 .page {
@@ -9,14 +12,16 @@
 
   &__body {
     margin: 0;
-  &::-webkit-scrollbar {
-    display: none;
+
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 }
 
 .section {
-  margin: 32px 16px;
+  padding: 32px 16px;
+
   &__title {
     font-family: NAMU_400, serif;
     font-style: normal;
@@ -41,15 +46,36 @@
   }
 }
 
+.container {
+  width: 100%;
+  max-width: 1440px;
+}
+
+.section, .footer, .content_center {
+  display: flex;
+  justify-content: center;
+}
+
 .header {
   width: 100%;
   background-color: #000;
   
   @include for-desktop {
     background-color: #fff;
+    position: relative;
+
+    &__container_big_scren{
+      display: flex;
+      justify-content: space-between; 
+      align-items: flex-end; 
+    }
+
+    &__right_section_big_screen {
+      display: flex;
+      justify-content: flex-end;  
+    }
   }
   &__top {
-    position: relative;
     display: flex;
     justify-content: space-between;
     height: 45px;
@@ -62,18 +88,30 @@
     }
   }
   &__main {
-    display: flex;
     position: relative;
-    flex-direction: column;
+    display: flex;
     justify-content: space-evenly;
     align-content: flex-end;
     flex-wrap: wrap;
     align-items: center;
 
+    @include for-desktop {
+      display: block;
+      max-height: 100vh;
+      min-height: 55vw;
+      overflow: hidden;
+    }
   }
   &__bottom {
-    height: 300px;
     background-color: #f3f3f3;
+  }
+  &__content {
+    @include for-desktop {
+      position: absolute;
+      top: 39vw;;
+      width: 100%;
+
+    }
   }
   &__title {
     margin: 14px 16px 19px 16px;
@@ -84,17 +122,25 @@
     line-height: 24px;
     font-weight: 400;
 
+
+    @media (min-width: 600px) {
+      font-size: 11px;
+    }
+
+    @media (min-width: 1100px) {
+      font-size: 21px;
+      line-height: 32px;
+    }
+
+
     @include for-desktop {
-      position: absolute;
-      top: 20vw;
-      width: 40%;
+      max-width: 55%;
       font-family: 'Russo One';
       font-style: normal;
       font-weight: 400;
-      font-size: 24px;
-      line-height: 38px;
       letter-spacing: 0.03em;
     }
+
   }
   &__video {
     width: 100vw;
@@ -102,7 +148,8 @@
   &__playbutton {
     position: absolute;
     top: 50%;
-    margin-top: -32px;
+    left: 50%;
+    margin: -32px 0 0 -32px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,30 +175,8 @@
       height: 52px;
       width: 52px;
       background-image: url(../images/burger_menu-black.svg);
-      margin-right: 5vw;
     }
   }
-}
-
-.button-desktop {
-  display: none;
-    @include for-desktop {
-    font-family: Roboto Mono;
-    font-size: 16px;
-    line-height: 21px;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 52px;
-    background: #000000;
-    color: #fff;
-    right: 18vw;
-    top: 24px;
-  }
-
 }
 
 .logo {
@@ -176,26 +201,41 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 150px);
 
+  @include for-desktop {
+    font-family: 'Russo One';
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 300px);
+  }
+
   &__section {
     display: flex;
     flex-direction: column;
     text-align: center;
+
+    @include for-desktop {
+      margin-top: 75px;
+    }
   }
   &__largeText {
-    font-family: NAMU_400, serif;
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
     line-height: 34px;
     margin: 30px auto 9px auto;
+
+    @include for-desktop {
+      font-size: 52px;
+    }
   }
   &__smallText{
-    font-family: NAMU_400, serif;
     font-style: normal;
-    font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
+    line-height: 150%;
     margin: 0 auto 15px auto;
+
+    @include for-desktop {
+      font-size: 18px;
+    }
   }
 }
 
@@ -291,11 +331,16 @@
   max-width: 1440px;
 }
 
+.shop_description {
+  margin: 16px 0;
+  line-height: 28px;
+}
+.shop_bottom_button {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 0;
+}
 .team {
-  &__bottom_button {
-    display: block;
-    width: 100%;
-  }
   &__items {
     margin: 32px 0;
     &__item {
@@ -322,37 +367,24 @@
 }
 .news {
   background: #f3f3f3;
-  margin: 0;
 
-  &__bottom_button {
-    display: block;
-    width: 100vw;
-    margin: 0;
-  }
   &__items {
     margin: 32px 0;
+
     &__item {
+
       &__title {
         font-size: 24px;
         margin: 24px 0 16px;
       }
+      
       &__date {
         display: none;
       }
     }
   }
 }
-
-.shop_description {
-  margin: 16px 0;
-  line-height: 28px;
-}
-.shop_bottom_button {
-  display: flex;
-  justify-content: center;
-  margin: 32px 0 0;
-}
-.shop {
+.shop, .news__items, .team__items {
   display: flex;
   justify-content: space-between;
   overflow-x: scroll;
@@ -364,7 +396,6 @@
 
     &__img {
       width: 100%;
-      height: 254px;
       overflow: hidden;
 
       img {
@@ -412,6 +443,10 @@
       }
     }
   }
+
+  .social {
+    justify-content: center; 
+  }
 } 
 .button {
   border: none;
@@ -425,6 +460,11 @@
   font-size: 16px;
   text-decoration: none;
   text-align: center;
+  display: inline-block;
+  
+  @include for-mobile {
+    display: block;
+  }
 
   &--white_on_black {
     background: #fff;
@@ -475,7 +515,6 @@
 }
 .social {
   display: flex;
-  justify-content: center; 
   margin: 32px 0;
 
   a {
@@ -497,6 +536,20 @@
     }
     &.tg {
       background-image: url(../images/social/telegram.svg);
+    }
+  }
+
+  &--black {
+    a {
+      &.insta {
+        background-image: url(../images/social/insta_black.svg);
+      }
+      &.twitter {
+        background-image: url(../images/social/twitter_black.svg);
+      }
+      &.fb {
+        background-image: url(../images/social/fb_black.svg);
+      }
     }
   }
 }
@@ -544,4 +597,25 @@
     width: 100%;
   }
 }
+.button--header-big-screen {
+  display: none;
+    @include for-desktop {
+    display: block;
+    padding: 12px 48px;
+    margin-right: 32px;
+  }
+}
 
+.big_screen_only {
+  @include for-mobile {
+    display: none;
+  }
+}
+.small_screen_only {
+  @include for-desktop {
+    display: none;
+  }
+}
+.button_container {
+  text-align: center;
+}
