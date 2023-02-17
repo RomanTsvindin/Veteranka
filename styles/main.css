@@ -15,18 +15,39 @@
     font-size: 32px;
     line-height: 38px;
     color: #000; }
+    .section__title--on-slider {
+      margin-left: 16px; }
+  .section__paragraf {
+    font-size: 16px;
+    line-height: 24px; }
+  .section__list {
+    padding: 0 26px; }
+  .section__bullet {
+    line-height: 24px;
+    margin-top: 40px; }
 
 .container {
   width: 100%;
   max-width: 1440px; }
 
-.section, .footer {
+.section, .footer, .content_center {
   display: flex;
   justify-content: center; }
 
 .header {
   width: 100%;
   background-color: #000; }
+  @media (min-width: 600px) {
+    .header {
+      background-color: #fff;
+      position: relative; }
+      .header__container_big_scren {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end; }
+      .header__right_section_big_screen {
+        display: flex;
+        justify-content: flex-end; } }
   .header__top {
     display: flex;
     justify-content: space-between;
@@ -34,16 +55,30 @@
     padding: 0 19px 0 16px;
     align-items: center;
     box-sizing: border-box; }
+    @media (min-width: 600px) {
+      .header__top {
+        height: 100px; } }
   .header__main {
-    display: flex;
     position: relative;
+    display: flex;
     justify-content: space-evenly;
     align-content: flex-end;
     flex-wrap: wrap;
     align-items: center; }
+    @media (min-width: 600px) {
+      .header__main {
+        display: block;
+        max-height: 100vh;
+        min-height: 60vw;
+        overflow: hidden; } }
   .header__bottom {
     height: 300px;
     background-color: #f3f3f3; }
+  @media (min-width: 600px) {
+    .header__content {
+      position: absolute;
+      top: 39vw;
+      width: 100%; } }
   .header__title {
     margin: 14px 16px 19px 16px;
     text-align: left;
@@ -52,12 +87,22 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: 400; }
+    @media (min-width: 600px) {
+      .header__title {
+        max-width: 40%;
+        font-family: 'Russo One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4vw;
+        line-height: 2.4vw;
+        letter-spacing: 0.03em; } }
   .header__video {
     width: 100vw; }
   .header__playbutton {
     position: absolute;
     top: 50%;
-    margin-top: -32px;
+    left: 50%;
+    margin: -32px 0 0 -32px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,21 +115,28 @@
     width: 18px;
     height: 18px; }
 
-.button--header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 21px 14px;
-  width: 280px;
-  height: 52px;
-  background-color: #fff;
-  margin: 0 auto 32px 16px;
-  font-family: Roboto Mono;
-  font-size: 18px;
-  line-height: 24px;
-  text-decoration: none;
-  color: #000; }
+.burger__img {
+  height: 24px;
+  width: 24px;
+  background-image: url(../images/burger_menu-white.svg); }
+  @media (min-width: 600px) {
+    .burger__img {
+      height: 52px;
+      width: 52px;
+      background-image: url(../images/burger_menu-black.svg); } }
+
+.logo {
+  width: 166px;
+  height: 16px;
+  background-image: url(../images/Veteranka_logo_white.svg);
+  background-size: cover; }
+  @media (min-width: 600px) {
+    .logo {
+      width: 302px;
+      height: 30px;
+      background-image: url(../images/logo_black_full.svg); } }
+  .logo__img {
+    height: 100%; }
 
 .achievments {
   display: grid;
@@ -167,6 +219,58 @@
   right: 14px;
   top: 50%;
   margin-top: -22px; }
+
+.our-goals {
+  display: flex;
+  flex-direction: column;
+  background-color: #F3F3F3;
+  margin: 0;
+  padding: 0 16px 34px 16px; }
+  .our-goals__photo {
+    width: 100vw;
+    margin: 10px -16px; }
+  .our-goals__section-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px; }
+
+.container {
+  width: 100%;
+  max-width: 1440px; }
+
+.team__bottom_button {
+  display: block;
+  width: 100%; }
+
+.team__items {
+  margin: 32px 0; }
+  .team__items__item__title {
+    font-size: 24px;
+    margin: 24px 0 16px; }
+  .team__items__item__date {
+    display: none; }
+  .team__items__item__social {
+    display: none;
+    justify-content: left;
+    height: 0;
+    overflow: hidden; }
+    .team__items__item__social a:first-child {
+      margin-left: 0; }
+
+.news {
+  background: #f3f3f3;
+  margin: 0; }
+  .news__bottom_button {
+    display: block;
+    width: 100vw;
+    margin: 0; }
+  .news__items {
+    margin: 32px 0; }
+    .news__items__item__title {
+      font-size: 24px;
+      margin: 24px 0 16px; }
+    .news__items__item__date {
+      display: none; }
 
 .shop_description {
   margin: 16px 0;
@@ -277,6 +381,21 @@
     background: #000;
     color: #fff;
     border-color: #000; }
+  .button--header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 21px 14px;
+    width: 280px;
+    height: 52px;
+    background-color: #fff;
+    margin: 0 auto 32px 16px;
+    font-family: Roboto Mono;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #000; }
 
 .contact_us_header {
   font-weight: 100;
@@ -318,3 +437,39 @@
     background-position: center;
     background-size: contain;
     background-image: url(../images/up.svg); }
+
+.shop, .news__items, .team__items {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  overflow-y: none; }
+  .shop__item, .news__items__item, .team__items__item {
+    width: 254px;
+    margin-left: 16px; }
+    .shop__item__img, .news__items__item__img, .team__items__item__img {
+      width: 100%;
+      overflow: hidden; }
+      .shop__item__img img, .news__items__item__img img, .team__items__item__img img {
+        width: 254px; }
+    .shop__item__name, .shop__item__price, .news__items__item__name, .news__items__item__price, .team__items__item__name, .team__items__item__price {
+      margin: 10px 0; }
+  .shop__item:first-child, .news__items__item:first-child, .team__items__item:first-child {
+    margin-left: 0; }
+  .shop__item button, .news__items__item button, .team__items__item button {
+    width: 100%; }
+
+.button--header-big-screen {
+  display: none; }
+  @media (min-width: 600px) {
+    .button--header-big-screen {
+      display: block;
+      padding: 12px 48px;
+      margin-right: 32px; } }
+
+@media (max-width: 601px) {
+  .big_screen_only {
+    display: none; } }
+
+@media (min-width: 600px) {
+  .small_screen_only {
+    display: none; } }
