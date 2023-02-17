@@ -12,7 +12,6 @@
 
 .section {
   margin: 32px 16px;
-
   &__title {
     font-family: NAMU_400, serif;
     font-style: normal;
@@ -88,7 +87,6 @@
     height: 18px;
   }
 }
-
 
 .achievments {
   display: grid;
@@ -205,6 +203,56 @@
   }
 }
 
+.team {
+  &__bottom_button {
+    display: block;
+    width: 100%;
+  }
+  &__items {
+    margin: 32px 0;
+    &__item {
+      &__title {
+        font-size: 24px;
+        margin: 24px 0 16px;
+      }
+      &__date {
+        display: none;
+      }
+      &__social {
+          display: none;
+          justify-content: left; 
+          height: 0;
+          overflow: hidden;
+        a {
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.news {
+  background: #f3f3f3;
+
+  &__bottom_button {
+    display: block;
+    width: 100%;
+  }
+  &__items {
+    margin: 32px 0;
+    &__item {
+      &__title {
+        font-size: 24px;
+        margin: 24px 0 16px;
+      }
+      &__date {
+        display: none;
+      }
+    }
+  }
+}
+
 .shop_description {
   margin: 16px 0;
   line-height: 28px;
@@ -311,9 +359,7 @@
     color: #fff;
     border-color:#000;
   }
-}
 
-.button {
   &--header{
     display: flex;
     align-items: center;
@@ -375,4 +421,36 @@
     background-size: contain;
     background-image: url(../images/up.svg);
   }   
+}
+.shop, .news__items, .team__items {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  overflow-y: none;
+ 
+  &__item {
+    width: 254px;
+    margin-left: 16px;
+
+    &__img {
+      width: 100%;
+      overflow: hidden;
+
+      img {
+        width: 254px;
+      }
+    }
+
+    &__name, &__price {
+      margin: 10px 0;
+    }
+  }
+
+  &__item:first-child {
+    margin-left: 0;
+  }
+
+  &__item button {
+    width: 100%;
+  }
 }
