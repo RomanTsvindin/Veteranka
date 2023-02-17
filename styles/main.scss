@@ -1,3 +1,8 @@
+@mixin for-desktop {
+  @media (min-width: 600px) { @content; }
+}
+
+
 .page {
   font-family: 'NAMU_400';
   font-size: 16px;
@@ -19,6 +24,9 @@
     font-size: 32px;
     line-height: 38px;
     color: #000;
+    &--on-slider {
+      margin-left: 16px;
+    }
   }
   &__paragraf {
     font-size: 16px;
@@ -36,13 +44,22 @@
 .header {
   width: 100%;
   background-color: #000;
+  
+  @include for-desktop {
+    background-color: #fff;
+  }
   &__top {
+    position: relative;
     display: flex;
     justify-content: space-between;
     height: 45px;
     padding: 0 19px 0 16px;
     align-items: center;
     box-sizing: border-box;
+
+    @include for-desktop {
+      height: 100px;
+    }
   }
   &__main {
     display: flex;
@@ -52,6 +69,7 @@
     align-content: flex-end;
     flex-wrap: wrap;
     align-items: center;
+
   }
   &__bottom {
     height: 300px;
@@ -65,6 +83,18 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
+
+    @include for-desktop {
+      position: absolute;
+      top: 20vw;
+      width: 40%;
+      font-family: 'Russo One';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 38px;
+      letter-spacing: 0.03em;
+    }
   }
   &__video {
     width: 100vw;
@@ -85,6 +115,59 @@
   &__play {
     width: 18px;
     height: 18px;
+  }
+}
+
+.burger {
+  &__img {
+    height: 24px;
+    width: 24px;
+    background-image: url(../images/burger_menu-white.svg);
+
+    @include for-desktop {
+      height: 52px;
+      width: 52px;
+      background-image: url(../images/burger_menu-black.svg);
+      margin-right: 5vw;
+    }
+  }
+}
+
+.button-desktop {
+  display: none;
+    @include for-desktop {
+    font-family: Roboto Mono;
+    font-size: 16px;
+    line-height: 21px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 52px;
+    background: #000000;
+    color: #fff;
+    right: 18vw;
+    top: 24px;
+  }
+
+}
+
+.logo {
+  width: 166px;
+  height: 16px;
+  background-image: url(../images/Veteranka_logo_white.svg);
+  background-size: cover;
+
+  @include for-desktop {
+    width: 302px;
+    height: 30px;
+    background-image: url(../images/logo_black_full.svg);
+  }
+
+  &__img {
+    height: 100%;
   }
 }
 
@@ -203,6 +286,11 @@
   }
 }
 
+.container {
+  width: 100%;
+  max-width: 1440px;
+}
+
 .team {
   &__bottom_button {
     display: block;
@@ -234,10 +322,12 @@
 }
 .news {
   background: #f3f3f3;
+  margin: 0;
 
   &__bottom_button {
     display: block;
-    width: 100%;
+    width: 100vw;
+    margin: 0;
   }
   &__items {
     margin: 32px 0;
@@ -454,3 +544,4 @@
     width: 100%;
   }
 }
+

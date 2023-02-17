@@ -20,6 +20,9 @@
   line-height: 38px;
   color: #000;
 }
+.section__title--on-slider {
+  margin-left: 16px;
+}
 .section__paragraf {
   font-size: 16px;
   line-height: 24px;
@@ -36,13 +39,24 @@
   width: 100%;
   background-color: #000;
 }
+@media (min-width: 600px) {
+  .header {
+    background-color: #fff;
+  }
+}
 .header__top {
+  position: relative;
   display: flex;
   justify-content: space-between;
   height: 45px;
   padding: 0 19px 0 16px;
   align-items: center;
   box-sizing: border-box;
+}
+@media (min-width: 600px) {
+  .header__top {
+    height: 100px;
+  }
 }
 .header__main {
   display: flex;
@@ -66,6 +80,19 @@
   line-height: 24px;
   font-weight: 400;
 }
+@media (min-width: 600px) {
+  .header__title {
+    position: absolute;
+    top: 20vw;
+    width: 40%;
+    font-family: "Russo One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.03em;
+  }
+}
 .header__video {
   width: 100vw;
 }
@@ -86,6 +113,59 @@
 .header__play {
   width: 18px;
   height: 18px;
+}
+
+.burger__img {
+  height: 24px;
+  width: 24px;
+  background-image: url(../images/burger_menu-white.svg);
+}
+@media (min-width: 600px) {
+  .burger__img {
+    height: 52px;
+    width: 52px;
+    background-image: url(../images/burger_menu-black.svg);
+    margin-right: 5vw;
+  }
+}
+
+.button-desktop {
+  display: none;
+}
+@media (min-width: 600px) {
+  .button-desktop {
+    font-family: Roboto Mono;
+    font-size: 16px;
+    line-height: 21px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 52px;
+    background: #000000;
+    color: #fff;
+    right: 18vw;
+    top: 24px;
+  }
+}
+
+.logo {
+  width: 166px;
+  height: 16px;
+  background-image: url(../images/Veteranka_logo_white.svg);
+  background-size: cover;
+}
+@media (min-width: 600px) {
+  .logo {
+    width: 302px;
+    height: 30px;
+    background-image: url(../images/logo_black_full.svg);
+  }
+}
+.logo__img {
+  height: 100%;
 }
 
 .achievments {
@@ -202,6 +282,11 @@
   line-height: 29px;
 }
 
+.container {
+  width: 100%;
+  max-width: 1440px;
+}
+
 .team__bottom_button {
   display: block;
   width: 100%;
@@ -228,10 +313,12 @@
 
 .news {
   background: #f3f3f3;
+  margin: 0;
 }
 .news__bottom_button {
   display: block;
-  width: 100%;
+  width: 100vw;
+  margin: 0;
 }
 .news__items {
   margin: 32px 0;
