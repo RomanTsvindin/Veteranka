@@ -402,10 +402,10 @@
 }
 
 .footer1 {
-  height: 1183px;
+  height: 1113px;
   display: grid;
   grid-template-columns: 40% 10% 14% 14% 22%;
-  grid-template-rows: 350px 700px 132px;
+  grid-template-rows: 350px 631px 132px;
   gap: 0px 0px;
   background: #000000;
   padding: 80px 60px 0 60px;
@@ -446,9 +446,6 @@
 }
 .footer1__menu3 ul li {
   margin-bottom: 24px;
-}
-.footer1__form {
-  grid-area: 2/3/3/6;
 }
 .footer1__bottom {
   grid-area: 3/1/4/6;
@@ -510,6 +507,96 @@
 }
 .footer1__social a.tg {
   background-image: url(../images/social/telegram.svg);
+}
+
+.form {
+  grid-area: 2/3/3/6;
+}
+.form__title {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 58px;
+  color: #FFFFFF;
+  margin: 0;
+  max-lines: 3;
+  letter-spacing: -0.3vw;
+}
+.form input, .form textarea {
+  resize: none;
+  box-sizing: border-box;
+  background-color: #000;
+  border: 2px solid #FFFFFF;
+  font-family: NAMU_900;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  height: 53px;
+  width: calc(50% - 13px);
+  overflow: hidden;
+}
+.form input::-moz-placeholder, .form textarea::-moz-placeholder {
+  color: #FFFFFF;
+  position: absolute;
+  left: 20px;
+  top: calc(50% - 9px);
+}
+.form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
+  color: #FFFFFF;
+  position: absolute;
+  left: 20px;
+  top: calc(50% - 9px);
+}
+.form input::placeholder, .form textarea::placeholder {
+  color: #FFFFFF;
+  position: absolute;
+  left: 20px;
+  top: calc(50% - 9px);
+}
+.form input:focus::-moz-placeholder, .form textarea:focus::-moz-placeholder {
+  text-indent: 500px;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.form input:focus:-ms-input-placeholder, .form textarea:focus:-ms-input-placeholder {
+  text-indent: 500px;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.form input:focus::placeholder, .form textarea:focus::placeholder {
+  text-indent: 500px;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.form input.name, .form textarea.name {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.form input.details, .form textarea.details {
+  width: 100%;
+  margin: 40px 0;
+  height: 154px;
+}
+.form input.details::-moz-placeholder, .form textarea.details::-moz-placeholder {
+  top: 18px;
+}
+.form input.details:-ms-input-placeholder, .form textarea.details:-ms-input-placeholder {
+  top: 18px;
+}
+.form input.details::placeholder, .form textarea.details::placeholder {
+  top: 18px;
+}
+.form input.button, .form textarea.button {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #FFFFFF;
+  width: 204px;
+  height: 53px;
 }
 
 @media (min-width: 700px) {
