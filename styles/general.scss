@@ -22,13 +22,13 @@
 
 .hide-on-desktop {
   @include for-desktop {
-    display: none;
+    display: none !important;
   }
 }
 
 .hide-on-mobile {
   @include for-mobile {
-    display: none;
+    display: none !important;
   }
 }
 .button {
@@ -45,6 +45,7 @@
   text-align: center;
   display: inline-block;
   cursor: pointer;
+  margin: 48px 0 16px 0;
   
   @include for-mobile {
     display: block;

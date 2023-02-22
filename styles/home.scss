@@ -42,61 +42,38 @@
 }
 
 .our-projects {
-  height: 739px;
   background-color: #fff;
-  &__section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  &__item {
     position: relative;
     box-sizing: border-box;
-    height: 127px;
     background: #fff;
     border: 3px solid #000;
-    padding-left: 17px;
-    &:nth-child(3) > h1 {
-      font-size: 20px;
-      line-height: 24px;
+    padding: 20px 16px 40px 16px;
+    margin: 16px 0;
+
+    &:last-child {
+      padding: 20px 16px;
     }
 
-    &--last{
-      height: 90px;
-      box-sizing: border-box;
-      background: #fff;
-      border: 3px solid #000;
-      justify-content: center;
-      & > h1 {
-        font-size: 24px;
-        line-height: 29px;
-      }
+    &__title {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      color: #000;
+      margin: 16px 0;
     }
-  }
-  &__section-title {
-    font-family: NAMU_400;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    color: #000;
-  }
-  &__section-request {
-    padding-bottom: 11px;
-    width: fit-content;
-    font-family: NAMU_900;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 16px;
-    line-height: 19px;
-    color: #000;
-    text-decoration: none;
-    border-bottom: 2px dashed #000;
-  }
-  &__container {
-    height: 642px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
+    &__request {
+      padding-bottom: 11px;
+      width: fit-content;
+      font-family: NAMU_900;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000;
+      text-decoration: none;
+      border-bottom: 2px dashed #000;
+    }
   }
 }
 
