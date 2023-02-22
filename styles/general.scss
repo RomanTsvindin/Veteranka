@@ -8,11 +8,16 @@
 
 .container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1200px;
 
   @include for-desktop {
     padding: 0 64px;
   }
+}
+
+.container-without-padding {
+  width: 100%;
+  max-width: 1200px;
 }
 
 .section, .footer, .content_center {
@@ -22,13 +27,13 @@
 
 .hide-on-desktop {
   @include for-desktop {
-    display: none;
+    display: none !important;
   }
 }
 
 .hide-on-mobile {
   @include for-mobile {
-    display: none;
+    display: none !important;
   }
 }
 .button {
@@ -45,6 +50,7 @@
   text-align: center;
   display: inline-block;
   cursor: pointer;
+  margin: 48px 0 16px 0;
   
   @include for-mobile {
     display: block;
@@ -342,7 +348,15 @@
 
 .footer {
   background: #000000;
+}
+
+.footer-small-screen {
   padding: 32px 16px;
+
+  .button {
+    margin: 12px 0;
+  }
+
   &__bottom {
     display: flex;
     justify-content: space-between;
@@ -380,11 +394,11 @@
 
 .footer-big-screen {
   height: 1113px;
+  width: 1200px;
   display: grid;
   grid-template-columns: 40% 10% 14% 14% 22%; 
   grid-template-rows: 350px 631px 132px; 
   gap: 0px 0px; 
-  background: #000000;
   padding: 80px 60px 0 60px;
 
   &__main { grid-area: 1 / 1 / 2 / 2; }
@@ -611,5 +625,23 @@
     display: block;
     padding: 12px 48px;
     margin-right: 32px;
+  }
+}
+
+.tags {
+  display: flex;
+  justify-content: flex-start;  
+  flex-wrap: wrap; 
+
+  &__item {
+    border: solid #000 2px;
+    padding: 8px 16px;
+    margin: 0 16px 16px 0;
+    cursor: pointer;
+
+    &--active {
+      background: #000;
+      color: #fff;
+    }
   }
 }
