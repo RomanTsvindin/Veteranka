@@ -545,7 +545,7 @@
   .our-projects--desktop .items .item {
     background: #E6E6E6;
     width: 360px;
-    margin: 32px 16px 32px 0; }
+    margin: 32px 0; }
     .our-projects--desktop .items .item .image {
       width: 100%; }
     .our-projects--desktop .items .item .our-projects--desktop__item__container {
