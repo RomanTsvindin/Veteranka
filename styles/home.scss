@@ -1,0 +1,290 @@
+.achievments {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 150px);
+
+  @include for-desktop {
+    font-family: 'Russo One';
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 300px);
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @include for-desktop {
+      margin-top: 75px;
+    }
+  }
+  &__largeText {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    margin: 30px auto 9px auto;
+
+    @include for-desktop {
+      font-size: 52px;
+    }
+  }
+  &__smallText{
+    font-style: normal;
+    font-size: 12px;
+    line-height: 150%;
+    margin: 0 auto 15px auto;
+
+    @include for-desktop {
+      font-size: 18px;
+    }
+  }
+}
+
+.our-projects {
+  height: 739px;
+  background-color: #fff;
+  &__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    box-sizing: border-box;
+    height: 127px;
+    background: #fff;
+    border: 3px solid #000;
+    padding-left: 17px;
+    &:nth-child(3) > h1 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &--last{
+      height: 90px;
+      box-sizing: border-box;
+      background: #fff;
+      border: 3px solid #000;
+      justify-content: center;
+      & > h1 {
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+  }
+  &__section-title {
+    font-family: NAMU_400;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000;
+  }
+  &__section-request {
+    padding-bottom: 11px;
+    width: fit-content;
+    font-family: NAMU_900;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 2px dashed #000;
+  }
+  &__container {
+    height: 642px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+}
+
+.our-goals {
+  background-color: #F3F3F3;
+
+  &__photo {
+    width: 100%;
+    // margin: 10px -16px;
+  }
+  &__title {
+    margin-top: 0;
+
+    @include for-desktop {
+      font-family: 'Russo One';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 44px;
+      line-height: 53px;
+      letter-spacing: 0.04em;
+      max-width: 380px;
+    }
+  }
+
+  &__paragraph-title {
+    @include for-desktop {
+      font-family: 'Russo One';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 150%;
+      letter-spacing: 0.04em;
+    }
+  }
+  &__container{
+    @include for-desktop {
+      display: flex;
+      justify-content: space-between;  
+
+      & > div {
+        width: 100%;
+        margin: 20px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.shop__items, .news__items, .team__items {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  overflow-y: none;
+ 
+  &__item {
+    width: 254px;
+    margin-left: 16px;
+    
+    @include for-desktop {
+      width: 400px;
+    }
+
+    &__img {
+      width: 100%;
+      overflow: hidden;
+
+      img {
+        width: 255px;
+
+        @include for-desktop {
+          width: 400px;
+        }
+      }
+    }
+
+    &__name, &__price {
+      margin: 10px 0;
+    }
+  }
+
+  &__item:first-child {
+    margin-left: 0;
+  }
+
+  &__item button {
+    width: 100%;
+  }
+}
+
+.shop {
+  &__top_container {
+    @include for-desktop {
+      display: flex;
+      justify-content: flex-start; 
+      align-items: flex-end; 
+    }
+  }
+  &__description {
+    margin: 16px 0;
+    line-height: 28px;
+
+    @include for-desktop {
+      margin: 50px 0;
+      font-family: 'Roboto Mono';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      max-width: 325px;
+      margin-left: 70px;
+    }
+  }
+  &__bottom_button {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 0;
+  }
+}
+
+.team {
+  &__items {
+    margin: 32px 0;
+    &__item {
+      @include for-desktop {
+        width: 315px;
+      }
+      &__img {
+        img {
+          @include for-desktop {
+            width: 315px;
+          }
+        }
+      }
+      &__title {
+        font-size: 24px;
+        margin: 24px 0 16px;
+      }
+      &__date {
+        display: none;
+      }
+      &__social {
+          justify-content: left; 
+          overflow: hidden;
+        a {
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.news {
+  background: #f3f3f3;
+
+  &__items {
+    margin: 32px 0;
+
+    &__item {
+
+      &__title {
+        margin: 24px 0 16px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+      }
+
+      &__text {
+        font-style: normal;
+        font-size: 16px;
+        line-height: 150%;
+      }
+      
+      &__date {
+        font-size: 14px;
+        line-height: 19px;
+        color: #707070;
+        margin-top: 20px;
+      }
+    }
+  }
+}
