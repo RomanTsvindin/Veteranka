@@ -143,6 +143,9 @@
     &::-webkit-scrollbar {
       display: none;
     }
+    &--with-menu {
+      overflow: hidden;
+    }
   }
 }
 
@@ -645,3 +648,4 @@
     }
   }
 }
+
