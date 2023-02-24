@@ -25,6 +25,7 @@
      src: url(./fonts/Web/NAMU-Pro.woff2); 
     }
    </style>
+  <script src="/main.js" defer></script>
 </head>
 <body class="page__body">
   <header class="header">
@@ -38,7 +39,7 @@
           </a>
           <div class="header__right_section_big_screen">
             <button class="button header__top__button button--black_on_white button--header-big-screen">Задонатити</button>
-            <a href="#menu" class="burger">
+            <a href="#burger-menu" class="burger">
               <div class="burger__img"></div>
             </a>
           </div>
@@ -73,7 +74,31 @@
       </div>
     </div>
   </header>
-
+  <div class="burger-menu" id="burger-menu">
+    <div class="burger-menu__left-column">
+      <div class="burger-menu__logo"></div>
+    </div>
+    <a href="#" class="burger-menu__cross"></a>
+    <div class="burger-menu__menu">
+      <ul>
+        <li>Про нас</li>
+        <li>Послуги</li>
+        <li>Новини</li>
+        <li>Мерч</li>
+        <li>Контакти</li>
+    </ul>
+    <div class="burger-menu__languages">
+      <div class="ukr">УКР</div>
+      <div class="eng">ENG</div>
+    </div>
+    </div>
+    <div class="burger-menu__socials">
+        <a href="#" class="insta"></a>
+        <a href="#" class="twitter"></a>
+        <a href="#" class="fb"></a>
+        <!-- <a href="#" class="tg"></a> -->
+    </div>
+  </div>
   <section class="header__bottom content_center">
     <div class="achievments container-without-padding">
       <div class="achievments__section">
