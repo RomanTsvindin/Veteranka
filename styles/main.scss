@@ -17,7 +17,7 @@
   &__logo {
     width: 16.65px;
     height: 15.75px;
-    background-image: url("/images/logo-char.svg");
+    background-image: url("../images/logo-char.svg");
     margin: 20px auto;
   }
   &__left-column {
@@ -35,7 +35,7 @@
     right: 16px;
     height: 24px;
     width: 24px;
-    background-image: url("/images/cross.svg");
+    background-image: url("../images/cross.svg");
     z-index: 1;
   }
   &__socials {
